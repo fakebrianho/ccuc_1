@@ -40,8 +40,7 @@
 	letter-spacing: 0.1em;
 	margin-top: 4.5em;
 	margin-bottom: 5em;
-	padding: 0 10rem;
-	/* max-width: 700px; */
+	padding: 0 2.5rem;
 }
 .planButton {
 	display: inline-flex;

@@ -15,24 +15,21 @@ export const t = {
 		verse: '"I have come that they may have life, and have it to the full." John 10:10',
 		locations: {
 			heading: 'Join Us Sunday',
-			subheading:
-				'Online or at any of our various locations across Illinois',
+			subheading: 'Online or at any of our various locations across Illinois',
 			viewLocation: 'View Location',
 		},
 		events: {
 			intro: "What's Happening?",
 			upcoming: 'Upcoming',
 			events: 'Events',
-			subheading:
-				"From worship nights to outreach projects, there's always something to be a part of.",
+			subheading: "From worship nights to outreach projects, there's always something to be a part of.",
 			viewAll: 'VIEW ALL EVENTS',
 			list: [
 				{
 					month: 'MAY',
 					day: '18',
 					title: 'Youth Worship Night',
-					description:
-						'An evening of worship, prayer, and fellowship for students and young adults.',
+					description: 'An evening of worship, prayer, and fellowship for students and young adults.',
 					typeLabel: 'WORSHIP',
 					typeClass: 'typeWorship',
 				},
@@ -40,8 +37,7 @@ export const t = {
 					month: 'MAY',
 					day: '24',
 					title: 'Neighborhood Outreach',
-					description:
-						'Serve local families through meal distribution and community support activities.',
+					description: 'Serve local families through meal distribution and community support activities.',
 					typeLabel: 'OUTREACH',
 					typeClass: 'typeOutreach',
 				},
@@ -49,8 +45,7 @@ export const t = {
 					month: 'JUN',
 					day: '02',
 					title: 'Leadership Training',
-					description:
-						'Practical training for team leaders focused on ministry care and discipleship.',
+					description: 'Practical training for team leaders focused on ministry care and discipleship.',
 					typeLabel: 'TRAINING',
 					typeClass: 'typeTraining',
 				},
@@ -96,10 +91,7 @@ export const t = {
 				{
 					title: 'More',
 					links: [
-						{
-							label: 'Giving',
-							href: 'https://ccuc.churchcenter.com/Giving',
-						},
+						{ label: 'Giving', href: '/events' },
 						{ label: 'Plan a Visit', href: '/giving' },
 						{ label: 'Get Baptized', href: '/contact' },
 					],
@@ -115,18 +107,9 @@ export const t = {
 				'Faith, action, and purpose',
 				'Everyone is welcome here',
 			],
-			whoWeAre: {
-				question: 'Who We Are',
-				answer: `Chinese Christian Union Church (CCUC) is a multi-generational church rooted in Chicago's Chinatown. Founded over a century ago, we exist to worship God, build community, and serve our neighbors across racial and cultural lines.`,
-			},
-			ourLocations: {
-				question: 'Our Locations',
-				answer: 'CCUC gathers across three campuses in the greater Chicago area — Chinatown, South, and West — each reflecting the unique community it serves while sharing one vision and family.',
-			},
-			getInvolved: {
-				question: 'Get Involved',
-				answer: `There are many ways to plug in — join a small group, serve on a ministry team, or simply show up on a Sunday. Reach out to any of our campuses and we'd love to connect you.`,
-			},
+			whoWeAre: { question: 'Who We Are', answer: `Chinese Christian Union Church (CCUC) is a multi-generational church rooted in Chicago's Chinatown. Founded over a century ago, we exist to worship God, build community, and serve our neighbors across racial and cultural lines.` },
+			ourLocations: { question: 'Our Locations', answer: 'CCUC gathers across three campuses in the greater Chicago area — Chinatown, South, and West — each reflecting the unique community it serves while sharing one vision and family.' },
+			getInvolved: { question: 'Get Involved', answer: `There are many ways to plug in — join a small group, serve on a ministry team, or simply show up on a Sunday. Reach out to any of our campuses and we'd love to connect you.` },
 			ourCommitments: { question: 'Our Commitments' },
 			ourBeliefs: { question: 'Our Beliefs' },
 		},
@@ -187,8 +170,7 @@ export const t = {
 			tagline: '计划您的拜访',
 			header1: '就这样',
 			header2: '来吧',
-			content:
-				'无论您是第一次探索信仰，还是在寻找一个新的教会家园，我们都期待在这个主日欢迎您。',
+			content: '无论您是第一次探索信仰，还是在寻找一个新的教会家园，我们都期待在这个主日欢迎您。',
 			planButton: '计划您的拜访',
 			contactButton: '联系我们',
 		},
@@ -201,18 +183,9 @@ export const t = {
 				'信仰、行动与使命',
 				'人人在此受欢迎',
 			],
-			whoWeAre: {
-				question: '我们是谁',
-				answer: '中华基督教联合教会（CCUC）是一间扎根于芝加哥唐人街的多代同堂教会。百年前建立至今，我们致力于敬拜神、建立社区，并跨越种族与文化界限服务邻里。',
-			},
-			ourLocations: {
-				question: '我们的教会',
-				answer: 'CCUC 在大芝加哥地区设有三个校区——唐人街、南区和西区——每个校区服务不同的社区，共同持守同一异象与大家庭。',
-			},
-			getInvolved: {
-				question: '参与其中',
-				answer: '有许多方式可以加入我们——参加小组、在事工团队中服事，或者在某个主日直接来访。欢迎联系我们任一校区，我们期待与您相识。',
-			},
+			whoWeAre: { question: '我们是谁', answer: '中华基督教联合教会（CCUC）是一间扎根于芝加哥唐人街的多代同堂教会。百年前建立至今，我们致力于敬拜神、建立社区，并跨越种族与文化界限服务邻里。' },
+			ourLocations: { question: '我们的教会', answer: 'CCUC 在大芝加哥地区设有三个校区——唐人街、南区和西区——每个校区服务不同的社区，共同持守同一异象与大家庭。' },
+			getInvolved: { question: '参与其中', answer: '有许多方式可以加入我们——参加小组、在事工团队中服事，或者在某个主日直接来访。欢迎联系我们任一校区，我们期待与您相识。' },
 			ourCommitments: { question: '我们的委身' },
 			ourBeliefs: { question: '我们的信仰' },
 		},

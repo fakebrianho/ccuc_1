@@ -2,6 +2,14 @@
 	width: 100%;
 }
 
+.cta {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: 3em;
+}
+
 .grid {
 	width: 80%;
 	margin: 0 auto;
@@ -11,56 +19,102 @@
 }
 
 .card {
-	border: 1px solid #ffffff;
-	border-radius: 0;
-	padding: 2rem;
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	border-radius: 1.25rem;
+	overflow: hidden;
 	display: flex;
 	flex-direction: column;
-	gap: 1.2rem;
+	background: rgba(255, 255, 255, 0.03);
+	transition: border-color 0.2s ease;
 }
 
-.title {
-	font-size: 1.05rem;
-	font-weight: 700;
-	color: #ffffff;
+.card:hover {
+	border-color: rgba(255, 255, 255, 0.3);
 }
 
 .imageWrap {
 	position: relative;
 	width: 100%;
-	aspect-ratio: 16 / 10;
-	border-radius: 24px;
-	border: 1px solid #ffffff;
+	aspect-ratio: 16 / 9;
 }
 
 .image {
 	object-fit: cover;
-	border-radius: 24px;
 }
 
-.description {
-	font-size: 0.95rem;
-	line-height: 1.45;
-	color: rgba(255, 255, 255, 0.9);
+.cardBody {
+	padding: 1.25rem 1.25rem 0.75rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	flex: 1;
+}
+
+.title {
+	font-size: 1rem;
+	font-weight: 700;
+	color: #ffffff;
+}
+
+.address {
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 0.04em;
+	color: rgba(255, 255, 255, 0.4);
+	margin-bottom: 0.25rem;
+}
+
+.services {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 0.45rem;
+}
+
+.serviceRow {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.35rem 0;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.serviceRow:last-child {
+	border-bottom: none;
+}
+
+.serviceLabel {
+	font-size: 0.78rem;
+	font-weight: 600;
+	color: rgba(255, 255, 255, 0.75);
+}
+
+.serviceTime {
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	color: rgba(255, 255, 255, 0.45);
 }
 
 .button {
-	margin-top: auto;
+	margin: 1rem 1.25rem 1.25rem;
 	align-self: flex-start;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	padding: 0.5rem 0.9rem;
-	border: 1px solid #ffffff;
+	padding: 0.45rem 1rem;
+	border: 1px solid rgba(255, 255, 255, 0.3);
 	border-radius: 9999px;
-	font-size: 0.85rem;
-	font-weight: 600;
-	color: #ffffff;
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.7);
 	text-decoration: none;
 	position: relative;
 	overflow: hidden;
 	z-index: 0;
-	transition: color 0.25s ease;
+	transition: color 0.25s ease, border-color 0.25s ease;
 }
 
 .button::before {
@@ -76,15 +130,9 @@
 
 .button:hover {
 	color: #131313;
+	border-color: #ffffff;
 }
 
 .button:hover::before {
 	transform: scaleX(1);
-}
-.cta {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	margin-bottom: 3em;
 }

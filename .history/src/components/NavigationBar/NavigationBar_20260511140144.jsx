@@ -17,11 +17,7 @@ function NavigationBar() {
 		{ label: tx.aboutUs, href: '/about' },
 		{ label: tx.churches, href: '/churches' },
 		{ label: tx.events, href: '/events' },
-		{
-			label: tx.giving,
-			href: 'https://ccuc.churchcenter.com/giving',
-			openInNewTab: true,
-		},
+		{ label: tx.giving, href: 'https://ccuc.churchcenter.com/giving' },
 	]
 
 	return (
@@ -35,7 +31,6 @@ function NavigationBar() {
 						key={link.href}
 						label={link.label}
 						href={link.href}
-						openInNewTab={link.openInNewTab}
 					/>
 				))}
 				<button className={styles.langToggle} onClick={toggleLang}>

@@ -70,8 +70,8 @@
 	transform: scaleX(1);
 }
 .container {
-	/* border: 2px solid red; */
-	padding: 0 12em;
+	width: 80%;
+	margin: 0 auto;
 }
 
 .eventContainer {

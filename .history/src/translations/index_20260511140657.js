@@ -98,7 +98,7 @@ export const t = {
 					links: [
 						{
 							label: 'Giving',
-							href: 'https://ccuc.churchcenter.com/Giving',
+							href: 'https://ccuc.churchcenter.com/giving',
 						},
 						{ label: 'Plan a Visit', href: '/giving' },
 						{ label: 'Get Baptized', href: '/contact' },
