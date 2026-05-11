@@ -1,0 +1,17 @@
+.container {
+	border: 2px solid red;
+	/* width: 100%; */
+	margin-top: 1.25vw;
+	margin-left: 1.25vw;
+	margin-right: 1.25vw;
+	display: flex;
+	/* justify-content: center; */
+	justify-content: space-between;
+	position: relative;
+	align-items: center;
+}
+.buttons {
+	/* border: 2px solid blue; */
+	display: flex;
+	gap: 1em;
+}

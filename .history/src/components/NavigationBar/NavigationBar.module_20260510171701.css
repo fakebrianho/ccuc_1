@@ -1,0 +1,6 @@
+.container {
+	border: 2px solid red;
+	width: 85vw;
+	margin: auto;
+    display: flexbox;
+}

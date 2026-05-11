@@ -1,0 +1,8 @@
+.plan {
+	background-color: rgba(245, 239, 227, 0.15);
+	margin: 0 12em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}

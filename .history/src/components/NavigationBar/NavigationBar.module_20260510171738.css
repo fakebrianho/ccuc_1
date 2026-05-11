@@ -1,0 +1,9 @@
+.container {
+	border: 2px solid red;
+	width: 85vw;
+	margin: auto;
+	display: flex;
+	/* justify-content: center; */
+    justify-content: sp;
+	align-items: center;
+}

@@ -1,0 +1,128 @@
+.plan {
+	background-color: rgba(245, 239, 227, 0.15);
+	margin: 0 12em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	position: relative;
+	padding: 0.3em;
+	border-radius: 7px;
+	margin-top: 15em;
+	margin-bottom: 15em;
+}
+.inner {
+	width: 100%;
+	height: 99%;
+	border: 1px solid grey;
+	border-radius: 5px;
+}
+.tagline {
+	color: #b33a3a;
+	font-weight: 800;
+	letter-spacing: 0.25em;
+	font-size: 16px;
+	margin-top: 3em;
+}
+.header {
+	font-family: var(--font-cormorant);
+	font-weight: 400;
+	font-size: 58px;
+	margin-top: 0.2em;
+}
+
+.header span {
+	color: #b33a3a;
+	font-family: var(--font-cormorant-light-italic);
+	font-style: italic;
+}
+.content {
+	letter-spacing: 0.1em;
+	margin-top: 4.5em;
+	margin-bottom: 5em;
+}
+.planButton {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	overflow: hidden;
+	z-index: 0;
+	background-color: transparent;
+	color: #f5efe3;
+	padding: 1em 2.25em;
+	width: 200px;
+	border: 1px solid #b33a3a;
+	border-radius: 4px;
+	font-weight: 800;
+	font-size: 14px;
+	letter-spacing: 5%;
+	margin-right: 1.5em;
+	transition:
+		color 0.28s ease,
+		border-color 0.28s ease;
+}
+.contactButton {
+	box-sizing: border-box;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	overflow: hidden;
+	z-index: 0;
+	padding: 1em 2.25em;
+	width: 200px;
+	border: 1px solid #f5efe33e;
+	border-radius: 4px;
+	font-weight: 800;
+	font-size: 14px;
+	letter-spacing: 5%;
+	transition:
+		color 0.28s ease,
+		border-color 0.28s ease;
+}
+
+.planButton::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(90deg, #b33a3a 0%, #c95a5a 100%);
+	transform: scaleX(1);
+	transform-origin: right center;
+	transition: transform 0.32s ease;
+	z-index: -1;
+}
+
+.contactButton::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(90deg, #b33a3a 0%, #c95a5a 100%);
+	transform: scaleX(0);
+	transform-origin: left center;
+	transition: transform 0.32s ease;
+	z-index: -1;
+}
+
+.planButton:hover {
+	color: #ffffff;
+	border-color: #f5efe3;
+}
+
+.contactButton:hover {
+	color: #f5efe3;
+	border-color: #b33a3a;
+}
+
+.planButton:hover::before {
+	transform: scaleX(0);
+}
+
+.contactButton:hover::before {
+	transform: scaleX(1);
+}
+
+.buttons {
+	margin-bottom: 3.5em;
+}

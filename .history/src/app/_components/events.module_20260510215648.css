@@ -1,0 +1,16 @@
+.divider {
+	border: 0;
+	height: 3px;
+	background: #b33a3a;
+	width: 50px;
+	margin: 2rem 0;
+}
+.intro {
+	color: #b33a3a;
+}
+.header {
+	display: flex;
+	/* justify-content: center; */
+	align-items: center;
+	gap: 0.75em;
+}

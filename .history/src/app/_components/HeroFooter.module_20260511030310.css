@@ -1,0 +1,16 @@
+.cta {
+	font-weight: 700;
+	color: white;
+	padding: 1em 2em;
+}
+
+.container {
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	justify-content: space-between;
+	border: 2px solid red;
+	width: 100%;
+	margin-left: 1.25vw;
+	/* margin-right: 1.25vw; */
+}

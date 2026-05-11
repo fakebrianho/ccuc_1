@@ -1,0 +1,23 @@
+.container {
+	border: 2px solid red;
+	width: 90vw;
+	margin: auto;
+	display: flex;
+	/* justify-content: center; */
+	justify-content: space-between;
+	position: relative;
+	align-items: center;
+    bord
+}
+.buttons {
+	border: 2px solid blue;
+	display: flex;
+	gap: 1em;
+}
+.hero {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: -1;
+}

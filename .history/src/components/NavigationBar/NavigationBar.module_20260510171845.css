@@ -1,0 +1,14 @@
+.container {
+	border: 2px solid red;
+	width: 85vw;
+	margin: auto;
+	display: flex;
+	/* justify-content: center; */
+	justify-content: space-between;
+	align-items: center;
+}
+.buttons {
+	border: 2px solid blue;
+	display: flex;
+    
+}

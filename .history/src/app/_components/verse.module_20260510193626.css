@@ -1,0 +1,42 @@
+.section {
+	min-height: 100svh;
+	display: grid;
+	place-items: center;
+	padding: 0 1rem;
+}
+
+.textStack {
+	display: grid;
+	place-items: center;
+}
+
+.ghostText,
+.text {
+	grid-area: 1 / 1;
+	max-width: 22ch;
+	font-size: clamp(2rem, 4vw, 5.5rem);
+	line-height: 1.05;
+	letter-spacing: -0.02em;
+	font-weight: 500;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.ghostText {
+	opacity: 0.14;
+}
+
+.text {
+	overflow: hidden;
+}
+
+.text :global(.line) {
+	display: block;
+	overflow: hidden;
+}
+
+.text :global(.char) {
+	display: inline-block;
+	opacity: 0.05;
+	will-change: transform, opacity;
+}

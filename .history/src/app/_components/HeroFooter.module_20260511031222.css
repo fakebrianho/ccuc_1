@@ -1,0 +1,28 @@
+.cta {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 700;
+	color: white;
+	line-height: 1;
+	padding: 1em 3.5em;
+	background-color: #2b2b2b;
+	border-radius: 30px;
+}
+
+.container {
+	position: absolute;
+	bottom: 1.75vw;
+	left: 2vw;
+	right: 2vw;
+	display: flex;
+	justify-content: space-between;
+	/* border: 2px solid red; */
+}
+.info p {
+	font-size: 25px;
+}
+.info h3 {
+	font-size: 25px;
+	font-weight: 800;
+}

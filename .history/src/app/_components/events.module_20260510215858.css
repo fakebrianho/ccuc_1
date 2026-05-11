@@ -1,0 +1,23 @@
+.divider {
+	border: 0;
+	height: 3px;
+	background: #b33a3a;
+	width: 50px;
+	margin: 2rem 0;
+}
+.intro {
+	color: #b33a3a;
+}
+.header {
+	display: flex;
+	align-items: center;
+	gap: 1.25em;
+}
+.upcoming{
+    font-family: var(--font-cormorant);
+}
+.events{
+    font-family: var(--font-cormorant);
+	color: #b33a3a;
+    font-style: ;
+}
