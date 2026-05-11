@@ -1,0 +1,34 @@
+.carouselWrap {
+	width: 100%;
+	height: 70svh;
+	border-radius: 0.75rem;
+	margn
+	overflow: hidden;
+	margin-bottom: 4rem;
+}
+
+.main {
+	max-width: 860px;
+	margin: 0 auto;
+	padding: 6rem 2rem 8rem;
+}
+
+.header {
+	margin-bottom: 4rem;
+}
+
+.eyebrow {
+	font-size: 0.75rem;
+	font-weight: 800;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	opacity: 0.5;
+	margin-bottom: 0.75rem;
+}
+
+.heading {
+	font-size: clamp(2.5rem, 5vw, 4rem);
+	font-weight: 700;
+	line-height: 1.05;
+	letter-spacing: -0.02em;
+}

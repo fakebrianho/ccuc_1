@@ -80,7 +80,7 @@ a {
 .section-flex-center {
 	width: 100%;
 	aspect-ratio: 16 / 9;
-	max-height: calc(50svh - (var(--container-pad-y) * 2));
+	max-height: calc(60svh - (var(--container-pad-y) * 2));
 	overflow: hidden;
 	position: relative;
 	/* border: 2px solid green; */

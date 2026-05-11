@@ -5,6 +5,7 @@ import logo from '@/assets/images/Logo.svg'
 import Image from 'next/image'
 import styles from './NavigationBar.module.css'
 import NavButtons from './NavButtons/NavButtons'
+import Link from 'next/link'
 import { useLanguage } from '@/context/LanguageContext'
 import { t } from '@/translations'
 
@@ -21,7 +22,7 @@ function NavigationBar() {
 
 	return (
 		<div className={styles.container}>
-			<Image src={logo} alt={'Logo of CCUC Chinatown'} width={240} />
+			<Link href='/'><Image src={logo} alt={'Logo of CCUC Chinatown'} width={240} /></Link>
 			<div className={styles.buttons}>
 				{navLinks.map((link) => (
 					<NavButtons key={link.href} label={link.label} href={link.href} />

@@ -1,24 +1,15 @@
 'use client'
-
 import React from 'react'
-import NavigationBar from '@/components/NavigationBar/NavigationBar'
-import Hero from './_components/hero'
-import Verse from './_components/verse'
-import Gallery from './_components/gallery'
-import Locations from './_components/locations'
-import Events from './_components/events'
-import Plan from './_components/plan'
-import Footer from '@/components/Footer/Footer'
-import HeroFooter from './_components/HeroFooter'
 import { useLanguage } from '@/context/LanguageContext'
 import { t } from '@/translations'
-
+import NavigationBar from '@/components/NavigationBar/NavigationBar'
+import Footer from '@/components/Footer/Footer'
 function Page() {
 	const { lang } = useLanguage()
 
 	return (
 		<div className='container'>
-			<section className='section'>
+			{/* <section className='section'>
 				<NavigationBar />
 				<Hero />
 				<HeroFooter />
@@ -37,7 +28,7 @@ function Page() {
 			</section>
 			<section>
 				<Plan />
-			</section>
+			</section> */}
 			<Footer />
 		</div>
 	)
