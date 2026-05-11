@@ -4,7 +4,7 @@ import { LanguageProvider } from '@/context/LanguageContext'
 
 export const metadata = {
 	title: 'Chinese Christian Union Church',
-	description: 'CCUC Website',
+	description: '',
 }
 
 export default function RootLayout({ children }) {

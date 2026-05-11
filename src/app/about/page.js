@@ -3,6 +3,7 @@ import React from 'react'
 import NavigationBar from '@/components/NavigationBar/NavigationBar'
 import Footer from '@/components/Footer/Footer'
 import Accordion from './_components/Accordion'
+import TeamCarousel from './_components/TeamCarousel'
 import styles from './about.module.css'
 import Carousel from '@/components/Carousel/Carousel'
 import img1 from '@/assets/images/1.jpg'
@@ -108,6 +109,9 @@ export default function AboutPage() {
 					<h1 className={styles.heading}>{tx.heading}</h1>
 				</div>
 				<Accordion items={faqItems} />
+				<hr className={styles.divider} />
+				<h2 className={styles.leadershipHeading}>Church Leadership</h2>
+				<TeamCarousel />
 			</main>
 			<Footer />
 		</div>

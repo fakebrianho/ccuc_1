@@ -194,15 +194,12 @@ export const t = {
 					cantoneseDetail_3: ' at ',
 					cantoneseDetail_bold3: '7:00 PM – 8:15 PM',
 					cantoneseDetail_4: '.',
-					cantoneseBody:
-						'Prayer is vital for developing a life of faith, deepening our understanding and love for God, and for seeking to know His will.',
+					cantoneseBody: 'Prayer is vital for developing a life of faith, deepening our understanding and love for God, and for seeking to know His will.',
 					cantoneseBulletin: 'Weekly Prayer Bulletin',
 					cantoneseZoom: 'Zoom Link (7:00 PM)',
 					mandarinLabel: 'Mandarin Congregation',
-					mandarinDetail:
-						'Online only · Every Wednesday · 7:00 PM – 8:15 PM',
-					mandarinBody:
-						'Prayer is vital for developing a life of faith, deepening our understanding and love for God, and for seeking to know His will.',
+					mandarinDetail: 'Online only · Every Wednesday · 7:00 PM – 8:15 PM',
+					mandarinBody: 'Prayer is vital for developing a life of faith, deepening our understanding and love for God, and for seeking to know His will.',
 					mandarinContact: 'Contact Ming Lee for details',
 					mandarinContactEmail: 'ming.lee@ccuc.net',
 					mandarinBulletin: 'Weekly Prayer Bulletin',
@@ -213,154 +210,29 @@ export const t = {
 					body: 'We strive to be a place where people of any background and life stage can connect, grow, and be challenged with those around them. For more information about any of our groups, please contact us.',
 					englishLabel: 'English Congregation',
 					items: [
-						{
-							question: 'Horizon',
-							answer: 'College or Age 22–29 · Sundays at 11:30 AM · Impact Center 2nd Floor',
-						},
-						{
-							question: 'Hosanna',
-							answer: 'Age 30–49 · Sundays at 11:30 AM · CCUC Fellowship Hall',
-						},
-						{
-							question: 'Titus',
-							answer: 'Age 50+ · Sundays at 11:30 AM · Impact Center 1st Floor',
-						},
+						{ question: 'Horizon', answer: 'College or Age 22–29 · Sundays at 11:30 AM · Impact Center 2nd Floor' },
+						{ question: 'Hosanna', answer: 'Age 30–49 · Sundays at 11:30 AM · CCUC Fellowship Hall' },
+						{ question: 'Titus', answer: 'Age 50+ · Sundays at 11:30 AM · Impact Center 1st Floor' },
 					],
 					cantoneseLabel: 'Cantonese Congregation',
 					cantoneseItems: [
-						{
-							question: 'Canaan',
-							answer: 'College · Fridays at 7:30 PM · Pui Tak Center 1st Fl.',
-						},
-						{
-							question: 'Sitos',
-							answer: 'Young Adult · Sundays at 1:30 PM · CCUC Basement',
-						},
-						{
-							question: 'Josiah',
-							answer: '2nd & 4th Saturdays at 5:30 PM · CCUC Fellowship Hall',
-						},
-						{
-							question: 'Grace',
-							answer: '2nd & 4th Saturdays at 6:00 PM · CCUC Basement',
-						},
-						{
-							question: 'Joshua',
-							answer: '3rd Sundays at 2:30 PM · Impact Center 1st Fl.',
-						},
-						{
-							question: 'Esther',
-							answer: 'Women · 2nd Saturdays at 11:00 AM · Impact Center 1st Fl.',
-						},
-						{
-							question: 'Harmony',
-							answer: '2nd Sundays at 1:00 PM · Impact Center 1st Fl.',
-						},
+						{ question: 'Canaan', answer: 'College · Fridays at 7:30 PM · Pui Tak Center 1st Fl.' },
+						{ question: 'Sitos', answer: 'Young Adult · Sundays at 1:30 PM · CCUC Basement' },
+						{ question: 'Josiah', answer: '2nd & 4th Saturdays at 5:30 PM · CCUC Fellowship Hall' },
+						{ question: 'Grace', answer: '2nd & 4th Saturdays at 6:00 PM · CCUC Basement' },
+						{ question: 'Joshua', answer: '3rd Sundays at 2:30 PM · Impact Center 1st Fl.' },
+						{ question: 'Esther', answer: 'Women · 2nd Saturdays at 11:00 AM · Impact Center 1st Fl.' },
+						{ question: 'Harmony', answer: '2nd Sundays at 1:00 PM · Impact Center 1st Fl.' },
 					],
 				},
 				youth: {
 					heading: 'Youth Ministries',
-					englishLabel: 'English Congregation',
+					subheading: 'English Congregation',
 					items: [
-						{
-							question: 'Young Teen Fellowship (YTF)',
-							answer: 'Grades 6–8 · Fridays at 7:30 PM & Sundays at 11:30 AM · Chinese Christian Union Church',
-						},
-						{
-							question: 'Kingdom Seekers',
-							answer: 'Grades 9–12 · Fridays at 7:30 PM & Sundays at 11:30 AM · Chinese Christian Union Church',
-						},
+						{ question: 'Young Teen Fellowship (YTF)', answer: 'Grades 6–8 · Fridays at 7:30 PM & Sundays at 11:30 AM · Chinese Christian Union Church' },
+						{ question: 'Kingdom Seekers', answer: 'Grades 9–12 · Fridays at 7:30 PM & Sundays at 11:30 AM · Chinese Christian Union Church' },
 					],
-					cantoneseLabel: 'Cantonese Congregation',
-					cantoneseItems: [
-						{
-							question: 'Jireh',
-							answer: 'High School · Fridays at 7:30 PM · Impact Center 1st Floor',
-						},
-						{
-							question: 'Nissi',
-							answer: 'Grades 3–8 · Fridays at 7:00 PM · Chinese Christian Union Church Basement',
-						},
-					],
-				},
-			},
-			south: {
-				youth: {
-					heading: 'Youth Ministries',
-					items: [
-						{ question: 'Junior High', answer: 'Grades 6–8 · Fridays at 3:00 PM' },
-						{ question: 'Joseph', answer: 'High School · Fridays at 7:30 PM · joseph@ccuc.net' },
-						{ question: 'FHL Youth Worship', answer: 'Grade 6 and above · Sundays at 11:45 AM' },
-						{ question: 'Youth Sunday School', answer: 'Grade 6 and above · Sundays at 10:15 AM' },
-						{ question: "Children's Worship", answer: 'Grades 1–5 · Sundays at 11:30 AM' },
-						{ question: "Children's Sunday School", answer: 'Grades 1–5 · Sundays at 11:30 AM' },
-						{ question: "Young Kids' Sunday School", answer: 'Preschool to Kindergarten · Sundays at 11:30 AM' },
-						{ question: "Young Kids' Sunday Worship", answer: 'Preschool to Kindergarten · Sundays at 11:30 AM' },
-					],
-				},
-				fellowships: {
-					heading: 'Fellowships',
-					cantoneseLabel: 'Cantonese Congregation',
-					cantoneseItems: [
-						{ question: 'Joel', answer: 'College · Fridays at 7:30 PM · joel@ccuc.net' },
-						{ question: 'Daniel', answer: 'Young Adults · Saturdays at 5:30 PM · daniel@ccuc.net' },
-						{ question: 'Emmanuel', answer: 'Family · 2nd Saturdays at 4:00 PM · emmanuel@ccuc.net' },
-						{ question: 'Ruth', answer: 'Sisters · 4th Saturdays at 3:00 PM · ruth@ccuc.net' },
-						{ question: 'Song of Songs', answer: 'Couples · 1st, 3rd & 5th Saturdays at 8:00 PM · songofsongs@ccuc.net' },
-					],
-					mandarinLabel: 'Mandarin Congregation',
-					mandarinItems: [
-						{ question: 'Mandarin Small Group', answer: 'Sundays at 8:00 PM' },
-					],
-					englishLabel: 'English Congregation',
-					englishItems: [
-						{ question: 'Y.A.M. (Young Adults Ministry)', answer: '1st & 3rd Wednesdays at 7:15 PM' },
-					],
-				},
-				worship: {
-					heading: 'Worship Service',
-					schedule: [
-						'8:45 AM — Mandarin Worship',
-						'11:30 AM — Cantonese Worship',
-						'1:00 PM — Online Replay (Mandarin & Cantonese)',
-					],
-					address: '3000 S Wallace Street',
-					tel: '312-225-5564',
-					bulletin: 'Sunday Service Bulletin',
-					video: 'Sunday Worship Video',
-				},
-				prayer: {
-					heading: 'Prayer Meeting',
-					detail: 'Online · Every Wednesday · 7:30 PM',
-					zoomId: 'Zoom ID: 353-962-8686',
-					zoomPwd: 'Password: 8686',
-					body: "For more information about this week's prayer fellowship, please contact us.",
-					guide: 'CCUC South Weekly Prayer Guide',
-					bulletin: 'Weekly Prayer Bulletin',
-				},
-			},
-			west: {
-				fellowships: {
-					heading: 'Fellowships',
-					items: [
-						{ question: 'Joy', answer: 'Elders · Wednesdays at 3:30 PM · west.joy@ccuc.net' },
-						{ question: 'Love', answer: 'Adults · Fridays at 7:30 PM · west.love@ccuc.net' },
-					],
-				},
-				worship: {
-					heading: 'Worship Service',
-					detail_1: 'In person and online every Sunday at ',
-					detail_bold1: '9:30 AM',
-					detail_2: '.',
-					bulletin: 'Sunday Service Bulletin',
-					livestream: 'Watch the Livestream',
-				},
-				prayer: {
-					heading: 'Prayer Meeting',
-					detail: 'Online · Every Wednesday · 7:30 PM',
-					body: 'Contact Min. Sen Xu for additional details.',
-					contactEmail: 'sen.xu@ccuc.net',
-					bulletin: 'Weekly Prayer Bulletin',
+					sub
 				},
 			},
 		},
@@ -514,14 +386,12 @@ export const t = {
 					cantoneseDetail_3: '',
 					cantoneseDetail_bold3: '晚上7:00 – 8:15',
 					cantoneseDetail_4: '。',
-					cantoneseBody:
-						'祷告是培养信仰生命、加深对神的认识与爱，以及寻求祂旨意的重要途径。',
+					cantoneseBody: '祷告是培养信仰生命、加深对神的认识与爱，以及寻求祂旨意的重要途径。',
 					cantoneseBulletin: '每周祷告周报',
 					cantoneseZoom: 'Zoom 链接（晚上7:00）',
 					mandarinLabel: '普通话会众',
 					mandarinDetail: '仅限线上 · 每周三 · 晚上7:00 – 8:15',
-					mandarinBody:
-						'祷告是培养信仰生命、加深对神的认识与爱，以及寻求祂旨意的重要途径。',
+					mandarinBody: '祷告是培养信仰生命、加深对神的认识与爱，以及寻求祂旨意的重要途径。',
 					mandarinContact: '详情请联系 Ming Lee',
 					mandarinContactEmail: 'ming.lee@ccuc.net',
 					mandarinBulletin: '每周祷告周报',
@@ -532,154 +402,28 @@ export const t = {
 					body: '我们致力于成为一个让任何背景、任何人生阶段的人都能彼此联系、共同成长、互相激励的地方。如需了解更多关于我们各小组的信息，请联系我们。',
 					englishLabel: '英语会众',
 					items: [
-						{
-							question: 'Horizon',
-							answer: '大学生或22–29岁 · 每周日上午11:30 · Impact Center 二楼',
-						},
-						{
-							question: 'Hosanna',
-							answer: '30–49岁 · 每周日上午11:30 · CCUC 团契厅',
-						},
-						{
-							question: 'Titus',
-							answer: '50岁以上 · 每周日上午11:30 · Impact Center 一楼',
-						},
+						{ question: 'Horizon', answer: '大学生或22–29岁 · 每周日上午11:30 · Impact Center 二楼' },
+						{ question: 'Hosanna', answer: '30–49岁 · 每周日上午11:30 · CCUC 团契厅' },
+						{ question: 'Titus', answer: '50岁以上 · 每周日上午11:30 · Impact Center 一楼' },
 					],
 					cantoneseLabel: '粤语会众',
 					cantoneseItems: [
-						{
-							question: 'Canaan',
-							answer: '大学生 · 每周五晚7:30 · Pui Tak Center 一楼',
-						},
-						{
-							question: 'Sitos',
-							answer: '青年 · 每周日下午1:30 · CCUC 地下室',
-						},
-						{
-							question: 'Josiah',
-							answer: '每月第2及第4周六下午5:30 · CCUC 团契厅',
-						},
-						{
-							question: 'Grace',
-							answer: '每月第2及第4周六下午6:00 · CCUC 地下室',
-						},
-						{
-							question: 'Joshua',
-							answer: '每月第3周日下午2:30 · Impact Center 一楼',
-						},
-						{
-							question: 'Esther',
-							answer: '女性 · 每月第2周六上午11:00 · Impact Center 一楼',
-						},
-						{
-							question: 'Harmony',
-							answer: '每月第2周日下午1:00 · Impact Center 一楼',
-						},
+						{ question: 'Canaan', answer: '大学生 · 每周五晚7:30 · Pui Tak Center 一楼' },
+						{ question: 'Sitos', answer: '青年 · 每周日下午1:30 · CCUC 地下室' },
+						{ question: 'Josiah', answer: '每月第2及第4周六下午5:30 · CCUC 团契厅' },
+						{ question: 'Grace', answer: '每月第2及第4周六下午6:00 · CCUC 地下室' },
+						{ question: 'Joshua', answer: '每月第3周日下午2:30 · Impact Center 一楼' },
+						{ question: 'Esther', answer: '女性 · 每月第2周六上午11:00 · Impact Center 一楼' },
+						{ question: 'Harmony', answer: '每月第2周日下午1:00 · Impact Center 一楼' },
 					],
 				},
 				youth: {
 					heading: '青年事工',
-					englishLabel: '英语会众',
+					subheading: '英语会众',
 					items: [
-						{
-							question: '少年团契 (YTF)',
-							answer: '初中六至八年级 · 每周五晚7:30及每周日上午11:30 · 中华基督教联合教会',
-						},
-						{
-							question: '寻道者 (Kingdom Seekers)',
-							answer: '高中九至十二年级 · 每周五晚7:30及每周日上午11:30 · 中华基督教联合教会',
-						},
+						{ question: '少年团契 (YTF)', answer: '初中六至八年级 · 每周五晚7:30及每周日上午11:30 · 中华基督教联合教会' },
+						{ question: '寻道者 (Kingdom Seekers)', answer: '高中九至十二年级 · 每周五晚7:30及每周日上午11:30 · 中华基督教联合教会' },
 					],
-					cantoneseLabel: '粤语会众',
-					cantoneseItems: [
-						{
-							question: 'Jireh',
-							answer: '高中 · 每周五晚7:30 · Impact Center 一楼',
-						},
-						{
-							question: 'Nissi',
-							answer: '三至八年级 · 每周五晚7:00 · 中华基督教联合教会地下室',
-						},
-					],
-				},
-			},
-			south: {
-				youth: {
-					heading: '青年事工',
-					items: [
-						{ question: '初中部', answer: '六至八年级 · 每周五下午3:00' },
-						{ question: 'Joseph', answer: '高中 · 每周五晚7:30 · joseph@ccuc.net' },
-						{ question: 'FHL 青年崇拜', answer: '六年级及以上 · 每周日上午11:45' },
-						{ question: '青年主日学', answer: '六年级及以上 · 每周日上午10:15' },
-						{ question: '儿童崇拜', answer: '一至五年级 · 每周日上午11:30' },
-						{ question: '儿童主日学', answer: '一至五年级 · 每周日上午11:30' },
-						{ question: '幼儿主日学', answer: '学前班至幼儿园 · 每周日上午11:30' },
-						{ question: '幼儿主日崇拜', answer: '学前班至幼儿园 · 每周日上午11:30' },
-					],
-				},
-				fellowships: {
-					heading: '团契',
-					cantoneseLabel: '粤语会众',
-					cantoneseItems: [
-						{ question: 'Joel', answer: '大学生 · 每周五晚7:30 · joel@ccuc.net' },
-						{ question: 'Daniel', answer: '青年 · 每周六下午5:30 · daniel@ccuc.net' },
-						{ question: 'Emmanuel', answer: '家庭 · 每月第2周六下午4:00 · emmanuel@ccuc.net' },
-						{ question: 'Ruth', answer: '姐妹 · 每月第4周六下午3:00 · ruth@ccuc.net' },
-						{ question: 'Song of Songs', answer: '夫妇 · 每月第1、3、5周六晚8:00 · songofsongs@ccuc.net' },
-					],
-					mandarinLabel: '普通话会众',
-					mandarinItems: [
-						{ question: '普通话小组', answer: '每周日晚8:00' },
-					],
-					englishLabel: '英语会众',
-					englishItems: [
-						{ question: 'Y.A.M.（青年事工）', answer: '每月第1及第3周三晚7:15' },
-					],
-				},
-				worship: {
-					heading: '主日崇拜',
-					schedule: [
-						'上午8:45 — 普通话崇拜',
-						'上午11:30 — 粤语崇拜',
-						'下午1:00 — 线上重播（普通话及粤语）',
-					],
-					address: '3000 S Wallace Street',
-					tel: '312-225-5564',
-					bulletin: '主日崇拜周报',
-					video: '主日敬拜视频',
-				},
-				prayer: {
-					heading: '祷告会',
-					detail: '线上 · 每周三 · 晚上7:30',
-					zoomId: 'Zoom ID：353-962-8686',
-					zoomPwd: '密码：8686',
-					body: '如需了解本周祷告团契的更多信息，请联系我们。',
-					guide: 'CCUC 南区每周祷告指引',
-					bulletin: '每周祷告周报',
-				},
-			},
-			west: {
-				fellowships: {
-					heading: '团契',
-					items: [
-						{ question: 'Joy', answer: '长者 · 每周三下午3:30 · west.joy@ccuc.net' },
-						{ question: 'Love', answer: '成人 · 每周五晚7:30 · west.love@ccuc.net' },
-					],
-				},
-				worship: {
-					heading: '主日崇拜',
-					detail_1: '每周日上午',
-					detail_bold1: '9:30',
-					detail_2: '现场及线上崇拜。',
-					bulletin: '主日崇拜周报',
-					livestream: '观看直播',
-				},
-				prayer: {
-					heading: '祷告会',
-					detail: '线上 · 每周三 · 晚上7:30',
-					body: '如需了解更多详情，请联系 Sen Xu 传道。',
-					contactEmail: 'sen.xu@ccuc.net',
-					bulletin: '每周祷告周报',
 				},
 			},
 		},

@@ -98,6 +98,20 @@
 	max-width: 640px;
 }
 
+.scheduleList {
+	list-style: none;
+	margin-bottom: 1.75rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.4rem;
+}
+
+.scheduleItem {
+	color: rgba(255, 255, 255, 0.65);
+	font-size: 1.05rem;
+	line-height: 1.6;
+}
+
 .accordionWrap {
 	margin-bottom: 3rem;
 }

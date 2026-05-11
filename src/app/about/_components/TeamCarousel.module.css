@@ -1,0 +1,84 @@
+.wrapper {
+	position: relative;
+	margin-top: 4rem;
+}
+
+.track {
+	display: flex;
+	gap: 1.25rem;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+	padding-bottom: 0.5rem;
+}
+
+.track::-webkit-scrollbar {
+	display: none;
+}
+
+.card {
+	flex: 0 0 200px;
+	scroll-snap-align: start;
+}
+
+.imageWrap {
+	position: relative;
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	border-radius: 10px;
+	overflow: hidden;
+	margin-bottom: 0.75rem;
+	background: rgba(255, 255, 255, 0.05);
+}
+
+.image {
+	object-fit: cover;
+}
+
+.name {
+	font-size: 0.9rem;
+	font-weight: 700;
+	color: rgba(255, 255, 255, 0.88);
+	margin-bottom: 0.2rem;
+}
+
+.title {
+	font-size: 0.75rem;
+	font-weight: 500;
+	letter-spacing: 0.04em;
+	color: rgba(255, 255, 255, 0.4);
+	text-transform: uppercase;
+}
+
+.arrow {
+	position: absolute;
+	top: calc(100px);
+	transform: translateY(-50%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	background: rgba(0, 0, 0, 0.4);
+	color: rgba(255, 255, 255, 0.7);
+	cursor: pointer;
+	backdrop-filter: blur(6px);
+	transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.arrow:hover {
+	background: rgba(0, 0, 0, 0.7);
+	border-color: rgba(255, 255, 255, 0.5);
+	color: #fff;
+}
+
+.arrowLeft {
+	left: -18px;
+}
+
+.arrowRight {
+	right: -18px;
+}

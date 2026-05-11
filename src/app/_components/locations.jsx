@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from './locations.module.css'
 import chinatown from '@/assets/images/chinatown.png'
 import south from '@/assets/images/south.png'
@@ -12,6 +13,7 @@ import { t } from '@/translations'
 const locationData = [
 	{
 		image: chinatown,
+		campus: 'chinatown',
 		mapsUrl: 'https://www.google.com/maps/search/?api=1&query=2301+S+Wentworth+Ave+Chicago+IL',
 		address: '2301 S. Wentworth',
 		services: [
@@ -23,6 +25,7 @@ const locationData = [
 	},
 	{
 		image: south,
+		campus: 'south',
 		mapsUrl: 'https://www.google.com/maps/search/?api=1&query=3000+S+Wallace+St+Chicago+IL',
 		address: '3000 S. Wallace St.',
 		services: [
@@ -32,6 +35,7 @@ const locationData = [
 	},
 	{
 		image: west,
+		campus: 'west',
 		mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Avery+Coonley+School+1400+Maple+Ave+Downers+Grove+IL+60515',
 		address: '1400 Maple Ave, Downers Grove',
 		services: [
@@ -58,15 +62,22 @@ function Locations() {
 			</div>
 			<div className={styles.grid}>
 				{locationData.map((loc, i) => (
-					<article key={loc.mapsUrl} className={styles.card}>
-						<div className={styles.imageWrap}>
-							<Image
-								src={loc.image}
-								alt={`${titles[i]} image`}
-								fill
-								className={styles.image}
-							/>
-						</div>
+					<article key={loc.campus} className={styles.card}>
+						<a
+							href={loc.mapsUrl}
+							target='_blank'
+							rel='noopener noreferrer'
+							className={styles.imageLink}
+						>
+							<div className={styles.imageWrap}>
+								<Image
+									src={loc.image}
+									alt={`${titles[i]} image`}
+									fill
+									className={styles.image}
+								/>
+							</div>
+						</a>
 						<div className={styles.cardBody}>
 							<h3 className={styles.title}>{titles[i]}</h3>
 							<p className={styles.address}>{loc.address}</p>
@@ -79,14 +90,12 @@ function Locations() {
 								))}
 							</ul>
 						</div>
-						<a
-							href={loc.mapsUrl}
+						<Link
+							href={`/churches?campus=${loc.campus}`}
 							className={styles.button}
-							target='_blank'
-							rel='noopener noreferrer'
 						>
 							{tx.viewLocation}
-						</a>
+						</Link>
 					</article>
 				))}
 			</div>
