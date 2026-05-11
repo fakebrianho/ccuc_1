@@ -106,6 +106,29 @@ export const t = {
 				},
 			],
 		},
+		eventsPage: {
+			eyebrow: 'Events',
+			heading: "What's Happening",
+			filterSite: 'Site',
+			filterCongregation: 'Congregation',
+			featured: 'Featured',
+			empty: 'No events match this filter.',
+			eventCount: (n) => `${n} event${n !== 1 ? 's' : ''}`,
+			sites: [
+				{ value: 'all', label: 'All Sites' },
+				{ value: 'chinatown', label: 'Chinatown' },
+				{ value: 'south', label: 'South' },
+				{ value: 'west', label: 'West' },
+			],
+			congregations: [
+				{ value: 'all', label: 'All' },
+				{ value: 'cantonese', label: '粵語 Cantonese' },
+				{ value: 'mandarin', label: '普通話 Mandarin' },
+				{ value: 'english', label: 'English' },
+			],
+			siteLabels: { all: 'All Sites', chinatown: 'Chinatown', south: 'South', west: 'West' },
+			congLabels: { all: 'All', cantonese: '粵語', mandarin: '普通話', english: 'English' },
+		},
 		churchesQuote: {
 			lines: [
 				'Many languages, One Voice',
@@ -425,6 +448,29 @@ export const t = {
 				'无论您是第一次探索信仰，还是在寻找一个新的教会家园，我们都期待在这个主日欢迎您。',
 			planButton: '计划您的拜访',
 			contactButton: '联系我们',
+		},
+		eventsPage: {
+			eyebrow: '活动',
+			heading: '最近有什么？',
+			filterSite: '地点',
+			filterCongregation: '会众',
+			featured: '精选活动',
+			empty: '没有符合条件的活动。',
+			eventCount: (n) => `${n} 个活动`,
+			sites: [
+				{ value: 'all', label: '所有地点' },
+				{ value: 'chinatown', label: '唐人街' },
+				{ value: 'south', label: '南区' },
+				{ value: 'west', label: '西区' },
+			],
+			congregations: [
+				{ value: 'all', label: '全部' },
+				{ value: 'cantonese', label: '粵語 Cantonese' },
+				{ value: 'mandarin', label: '普通話 Mandarin' },
+				{ value: 'english', label: 'English' },
+			],
+			siteLabels: { all: '所有地点', chinatown: '唐人街', south: '南区', west: '西区' },
+			congLabels: { all: '全部', cantonese: '粵語', mandarin: '普通話', english: 'English' },
 		},
 		churchesQuote: {
 			lines: [

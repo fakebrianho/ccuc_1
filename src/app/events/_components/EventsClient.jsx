@@ -2,25 +2,33 @@
 
 import { useSearchParams, useRouter, usePathname } from 'next/navigation'
 import { useCallback } from 'react'
+import { useLanguage } from '@/context/LanguageContext'
+import { t } from '@/translations'
 import {
 	events,
-	SITES,
-	CONGREGATIONS,
 	TYPE_COLORS,
-	SITE_LABELS,
-	CONG_LABELS,
 	filterEvents,
-	groupByMonth,
 	formatDate,
 } from '../_data/events'
 import styles from '../events.module.css'
+
+function groupByMonth(events, locale) {
+	const months = {}
+	for (const e of events) {
+		const d = new Date(e.date + 'T00:00:00')
+		const key = d.toLocaleString(locale, { month: 'long', year: 'numeric' })
+		if (!months[key]) months[key] = []
+		months[key].push(e)
+	}
+	return months
+}
 
 function Badge({ label, variant }) {
 	return <span className={`${styles.badge} ${styles[`badge_${variant}`]}`}>{label}</span>
 }
 
-function TypeBadge({ typeLabel }) {
-	const c = TYPE_COLORS[typeLabel] || TYPE_COLORS.SERVICE
+function TypeBadge({ typeLabel, typeLabelEn }) {
+	const c = TYPE_COLORS[typeLabelEn] || TYPE_COLORS.SERVICE
 	return (
 		<span
 			className={styles.typeBadge}
@@ -31,43 +39,39 @@ function TypeBadge({ typeLabel }) {
 	)
 }
 
-function SiteCongBadges({ site, congregation }) {
+function SiteCongBadges({ site, congregation, siteLabels, congLabels }) {
 	return (
 		<div className={styles.badgeRow}>
-			<Badge
-				label={SITE_LABELS[site]}
-				variant={site === 'all' ? 'all' : 'site'}
-			/>
+			<Badge label={siteLabels[site]} variant={site === 'all' ? 'all' : 'site'} />
 			{congregation !== 'all' && (
-				<Badge label={CONG_LABELS[congregation]} variant='cong' />
+				<Badge label={congLabels[congregation]} variant='cong' />
 			)}
 		</div>
 	)
 }
 
-function FeaturedCard({ event }) {
+function FeaturedCard({ event, siteLabels, congLabels, lang, locale }) {
 	return (
 		<article className={styles.featuredCard}>
 			<div className={styles.featuredCardInner}>
 				<div className={styles.featuredTop}>
-					<SiteCongBadges site={event.site} congregation={event.congregation} />
-					<TypeBadge typeLabel={event.typeLabel} />
+					<SiteCongBadges site={event.site} congregation={event.congregation} siteLabels={siteLabels} congLabels={congLabels} />
+					<TypeBadge typeLabel={event.typeLabel[lang]} typeLabelEn={event.typeLabel.en} />
 				</div>
 				<div className={styles.featuredBody}>
-					<p className={styles.featuredDate}>{formatDate(event.date)} · {event.time}</p>
-					<h2 className={styles.featuredTitle}>{event.title}</h2>
-					{event.subtitle && <p className={styles.featuredSubtitle}>{event.subtitle}</p>}
-					<p className={styles.featuredDesc}>{event.description}</p>
-					<p className={styles.featuredLocation}>{event.location}</p>
+					<p className={styles.featuredDate}>{formatDate(event.date, locale)} · {event.time[lang]}</p>
+					<h2 className={styles.featuredTitle}>{event.title[lang]}</h2>
+					<p className={styles.featuredDesc}>{event.description[lang]}</p>
+					<p className={styles.featuredLocation}>{event.location[lang]}</p>
 				</div>
 			</div>
 		</article>
 	)
 }
 
-function EventRow({ event }) {
+function EventRow({ event, siteLabels, congLabels, lang, locale }) {
 	const d = new Date(event.date + 'T00:00:00')
-	const month = d.toLocaleString('en-US', { month: 'short' }).toUpperCase()
+	const month = d.toLocaleString(locale, { month: 'short' }).toUpperCase()
 	const day = d.getDate()
 
 	return (
@@ -78,21 +82,24 @@ function EventRow({ event }) {
 			</div>
 			<div className={styles.eventContent}>
 				<div className={styles.eventTitleRow}>
-					<h3 className={styles.eventTitle}>{event.title}</h3>
-					{event.subtitle && <span className={styles.eventSubtitle}>{event.subtitle}</span>}
+					<h3 className={styles.eventTitle}>{event.title[lang]}</h3>
 				</div>
-				<p className={styles.eventMeta}>{event.time} · {event.location}</p>
-				<p className={styles.eventDesc}>{event.description}</p>
+				<p className={styles.eventMeta}>{event.time[lang]} · {event.location[lang]}</p>
+				<p className={styles.eventDesc}>{event.description[lang]}</p>
 			</div>
 			<div className={styles.eventRight}>
-				<TypeBadge typeLabel={event.typeLabel} />
-				<SiteCongBadges site={event.site} congregation={event.congregation} />
+				<TypeBadge typeLabel={event.typeLabel[lang]} typeLabelEn={event.typeLabel.en} />
+				<SiteCongBadges site={event.site} congregation={event.congregation} siteLabels={siteLabels} congLabels={congLabels} />
 			</div>
 		</div>
 	)
 }
 
 export default function EventsClient() {
+	const { lang } = useLanguage()
+	const tx = t[lang].eventsPage
+	const locale = lang === 'zh' ? 'zh-CN' : 'en-US'
+
 	const searchParams = useSearchParams()
 	const router = useRouter()
 	const pathname = usePathname()
@@ -112,23 +119,21 @@ export default function EventsClient() {
 	const filtered = filterEvents(events, site, congregation)
 	const featured = filtered.filter((e) => e.featured)
 	const listed = filtered.filter((e) => !e.featured)
-	const grouped = groupByMonth(listed)
+	const grouped = groupByMonth(listed, locale)
 	const totalCount = filtered.length
 
 	return (
 		<div className={styles.page}>
-			{/* header */}
 			<div className={styles.pageHeader}>
-				<p className={styles.eyebrow}>Events</p>
-				<h1 className={styles.heading}>What&apos;s Happening</h1>
+				<p className={styles.eyebrow}>{tx.eyebrow}</p>
+				<h1 className={styles.heading}>{tx.heading}</h1>
 			</div>
 
-			{/* sticky filter bar */}
 			<div className={styles.filterBar}>
 				<div className={styles.filterGroup}>
-					<span className={styles.filterLabel}>Site</span>
+					<span className={styles.filterLabel}>{tx.filterSite}</span>
 					<div className={styles.pills}>
-						{SITES.map((s) => (
+						{tx.sites.map((s) => (
 							<button
 								key={s.value}
 								className={`${styles.pill} ${site === s.value ? styles.pillActive : ''}`}
@@ -140,9 +145,9 @@ export default function EventsClient() {
 					</div>
 				</div>
 				<div className={styles.filterGroup}>
-					<span className={styles.filterLabel}>Congregation</span>
+					<span className={styles.filterLabel}>{tx.filterCongregation}</span>
 					<div className={styles.pills}>
-						{CONGREGATIONS.map((c) => (
+						{tx.congregations.map((c) => (
 							<button
 								key={c.value}
 								className={`${styles.pill} ${congregation === c.value ? styles.pillActive : ''}`}
@@ -153,33 +158,35 @@ export default function EventsClient() {
 						))}
 					</div>
 				</div>
-				<span className={styles.count}>{totalCount} event{totalCount !== 1 ? 's' : ''}</span>
+				<span className={styles.count}>{tx.eventCount(totalCount)}</span>
 			</div>
 
-			{/* featured */}
 			{featured.length > 0 && (
 				<section className={styles.featuredSection}>
-					<p className={styles.sectionLabel}>Featured</p>
+					<p className={styles.sectionLabel}>{tx.featured}</p>
 					<div className={styles.featuredGrid}>
-						{featured.map((e) => <FeaturedCard key={e.id} event={e} />)}
+						{featured.map((e) => (
+							<FeaturedCard key={e.id} event={e} siteLabels={tx.siteLabels} congLabels={tx.congLabels} lang={lang} locale={locale} />
+						))}
 					</div>
 				</section>
 			)}
 
-			{/* grouped list */}
 			{Object.keys(grouped).length > 0 ? (
 				<section className={styles.listSection}>
 					{Object.entries(grouped).map(([month, monthEvents]) => (
 						<div key={month} className={styles.monthGroup}>
 							<p className={styles.monthLabel}>{month}</p>
 							<div className={styles.monthRows}>
-								{monthEvents.map((e) => <EventRow key={e.id} event={e} />)}
+								{monthEvents.map((e) => (
+									<EventRow key={e.id} event={e} siteLabels={tx.siteLabels} congLabels={tx.congLabels} lang={lang} locale={locale} />
+								))}
 							</div>
 						</div>
 					))}
 				</section>
 			) : featured.length === 0 && (
-				<div className={styles.empty}>No events match this filter.</div>
+				<div className={styles.empty}>{tx.empty}</div>
 			)}
 		</div>
 	)
