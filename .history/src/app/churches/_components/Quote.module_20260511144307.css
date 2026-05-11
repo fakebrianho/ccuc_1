@@ -1,0 +1,28 @@
+.container {
+	border-top: 1.5px solid white;
+	border-bottom: 1.5px solid white;
+	padding: 2rem 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	max-width: 750px;
+	gap: 3rem;
+}
+.inner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+.container p {
+	color: grey;
+	font-weight: 700;
+	font-size: 28px;
+}
+.container .end {
+	color: white;
+	/* font-weight: 800; */
+	font-size: 34px;
+}

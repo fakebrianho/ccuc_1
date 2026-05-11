@@ -1,0 +1,19 @@
+.container {
+	border: 2px solid red;
+    border-top: 1.5px solid white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	max-width: 750px;
+}
+.container p {
+	color: grey;
+	font-weight: 700;
+	font-size: 28px;
+}
+.container .end {
+	color: white;
+	/* font-weight: 800; */
+	font-size: 34px;
+}

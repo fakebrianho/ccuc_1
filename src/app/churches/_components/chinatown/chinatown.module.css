@@ -1,0 +1,143 @@
+.section {
+	padding: 5rem 0;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.section:last-child {
+	border-bottom: none;
+}
+
+.heading {
+	font-size: 1.75rem;
+	font-weight: 800;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.9);
+	margin-bottom: 1rem;
+}
+
+.detail {
+	color: rgba(255, 255, 255, 0.55);
+	font-size: 1.05rem;
+	line-height: 1.7;
+	margin-bottom: 2rem;
+}
+
+.detail strong {
+	color: rgba(255, 255, 255, 0.85);
+	font-weight: 700;
+}
+
+.links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	margin-bottom: 3rem;
+}
+
+.link {
+	display: inline-block;
+	padding: 0.6rem 1.3rem;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 4px;
+	color: rgba(255, 255, 255, 0.6);
+	font-size: 0.875rem;
+	letter-spacing: 0.04em;
+	transition:
+		color 0.18s ease,
+		border-color 0.18s ease,
+		background 0.18s ease;
+	text-decoration: none;
+}
+
+.link:hover {
+	color: rgba(255, 255, 255, 0.95);
+	border-color: rgba(255, 255, 255, 0.5);
+	background: rgba(255, 255, 255, 0.05);
+}
+
+.linkButton {
+	background: rgba(255, 255, 255, 0.08);
+	border-color: rgba(255, 255, 255, 0.35);
+	color: rgba(255, 255, 255, 0.85);
+	font-weight: 700;
+}
+
+.linkButton:hover {
+	background: rgba(255, 255, 255, 0.14);
+	border-color: rgba(255, 255, 255, 0.65);
+	color: #fff;
+}
+
+.congregationLabel {
+	font-size: 0.75rem;
+	font-weight: 800;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.35);
+	margin-bottom: 0.6rem;
+	margin-top: 2.5rem;
+}
+
+.congregationLabel:first-of-type {
+	margin-top: 0;
+}
+
+.subheading {
+	font-size: 1.2rem;
+	font-weight: 700;
+	color: rgba(255, 255, 255, 0.75);
+	margin-bottom: 0.75rem;
+}
+
+.body {
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 1rem;
+	line-height: 1.7;
+	margin-bottom: 2.5rem;
+	max-width: 640px;
+}
+
+.accordionWrap {
+	margin-bottom: 3rem;
+}
+
+.carouselWrap {
+	width: 100%;
+	aspect-ratio: 16 / 7;
+	border-radius: 12px;
+	overflow: hidden;
+}
+
+/* prayer meeting two-column layout */
+.prayerGrid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 4rem;
+	align-items: start;
+}
+
+.prayerLeft {
+	display: flex;
+	flex-direction: column;
+}
+
+.prayerLeft .links {
+	margin-bottom: 0;
+}
+
+.prayerCarousel {
+	aspect-ratio: 4 / 3;
+	border-radius: 12px;
+	overflow: hidden;
+}
+
+@media (max-width: 768px) {
+	.prayerGrid {
+		grid-template-columns: 1fr;
+	}
+
+	.prayerCarousel {
+		aspect-ratio: 16 / 9;
+	}
+}

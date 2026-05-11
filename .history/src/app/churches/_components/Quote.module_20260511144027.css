@@ -1,0 +1,17 @@
+.container {
+	border: 2px solid red;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 750px;
+}
+.container p {
+	color: grey;
+	font-weight: 700;
+	font-size: 28px;
+}
+.end {
+	color: black;
+	font-weight: 800;
+	font-size: 34pxw;
+}
