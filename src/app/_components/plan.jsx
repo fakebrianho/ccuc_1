@@ -1,26 +1,29 @@
+'use client'
+
 import React from 'react'
 import styles from './plan.module.css'
 import Link from 'next/link'
+import { useLanguage } from '@/context/LanguageContext'
+import { t } from '@/translations'
 
 function Plan() {
+	const { lang } = useLanguage()
+	const tx = t[lang].plan
+
 	return (
 		<section className={styles.plan}>
 			<div className={styles.inner}>
-				<p className={styles.tagline}>PLAN YOUR VISIT</p>
+				<p className={styles.tagline}>{tx.tagline}</p>
 				<h1 className={styles.header}>
-					Come as <span>you are</span>
+					{tx.header1}<span>{tx.header2}</span>
 				</h1>
-				<p className={styles.content}>
-					Whether you're exploring your faith for the first time or
-					looking for a new <br></br>church home, we'd love to welcome
-					you this Sunday.
-				</p>
+				<p className={styles.content}>{tx.content}</p>
 				<div className={styles.buttons}>
 					<Link href='/plan' className={styles.planButton}>
-						PLAN YOUR VISIT
+						{tx.planButton}
 					</Link>
 					<Link href='/contact' className={styles.contactButton}>
-						CONTACT US
+						{tx.contactButton}
 					</Link>
 				</div>
 			</div>
@@ -29,8 +32,3 @@ function Plan() {
 }
 
 export default Plan
-{
-	/* <Link href='/events' className={styles.viewAll}>
-VIEW ALL EVENTS
-</Link> */
-}

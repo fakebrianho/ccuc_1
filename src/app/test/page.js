@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import NavigationBar from '@/components/NavigationBar/NavigationBar'
 import Hero from '../_components/hero'
@@ -8,8 +10,12 @@ import Events from '../_components/events'
 import Plan from '../_components/plan'
 import Footer from '@/components/Footer/Footer'
 import HeroFooter from '../_components/HeroFooter'
+import { useLanguage } from '@/context/LanguageContext'
+import { t } from '@/translations'
 
-function page() {
+function Page() {
+	const { lang } = useLanguage()
+
 	return (
 		<div className='container'>
 			<section className='section'>
@@ -18,10 +24,7 @@ function page() {
 				<HeroFooter />
 			</section>
 			<section className='section-flex-center'>
-				<Verse
-					text='“I have come that they may have life, and have it to the full.” 
-John 10:10'
-				/>
+				<Verse key={lang} text={t[lang].verse} />
 			</section>
 			<section className='section-unrounded'>
 				<Gallery />
@@ -40,4 +43,4 @@ John 10:10'
 	)
 }
 
-export default page
+export default Page

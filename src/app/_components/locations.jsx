@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -5,53 +7,43 @@ import styles from './locations.module.css'
 import chinatown from '@/assets/images/chinatown.png'
 import south from '@/assets/images/south.png'
 import west from '@/assets/images/west.png'
+import { useLanguage } from '@/context/LanguageContext'
+import { t } from '@/translations'
 
-const defaultLocationCards = [
-	{
-		title: 'CCUC Chinatown',
-		image: chinatown,
-		description: '2301 S. Wentworth',
-		href: '/locations/chinatown',
-		buttonLabel: 'View Location',
-	},
-	{
-		title: 'CCUC South',
-		image: south,
-		description: '3000 S. Wallace St.',
-		href: '/locations/south',
-		buttonLabel: 'View Location',
-	},
-	{
-		title: 'CCUC West',
-		image: west,
-		description: '1400 Maple Ave',
-		href: '/locations/west',
-		buttonLabel: 'View Location',
-	},
-]
+const locationImages = [chinatown, south, west]
+const locationHrefs = ['/locations/chinatown', '/locations/quincy', '/locations/newton']
+const locationTitles = {
+	en: ['CCUC Chinatown', 'CCUC South', 'CCUC West'],
+	zh: ['CCUC 唐人街', 'CCUC 南区', 'CCUC 西区'],
+}
+const locationAddresses = ['2301 S. Wentworth', '3000 S. Wallace St.', '1400 Maple Ave']
 
-function Locations({ cards = defaultLocationCards }) {
+function Locations() {
+	const { lang } = useLanguage()
+	const tx = t[lang].locations
+	const titles = locationTitles[lang]
+
 	return (
 		<section className={styles.section}>
 			<div className={styles.cta}>
-				<h3>Join Us Sunday</h3>
-				<p>Online or at any of our various locations across Illinois</p>
+				<h3>{tx.heading}</h3>
+				<p>{tx.subheading}</p>
 			</div>
 			<div className={styles.grid}>
-				{cards.map((card) => (
-					<article key={card.title} className={styles.card}>
-						<h3 className={styles.title}>{card.title}</h3>
+				{locationImages.map((img, i) => (
+					<article key={locationHrefs[i]} className={styles.card}>
+						<h3 className={styles.title}>{titles[i]}</h3>
 						<div className={styles.imageWrap}>
 							<Image
-								src={card.image}
-								alt={`${card.title} image`}
+								src={img}
+								alt={`${titles[i]} image`}
 								fill
 								className={styles.image}
 							/>
 						</div>
-						<p className={styles.description}>{card.description}</p>
-						<Link href={card.href} className={styles.button}>
-							{card.buttonLabel}
+						<p className={styles.description}>{locationAddresses[i]}</p>
+						<Link href={locationHrefs[i]} className={styles.button}>
+							{tx.viewLocation}
 						</Link>
 					</article>
 				))}

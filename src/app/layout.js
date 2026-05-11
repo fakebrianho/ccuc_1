@@ -1,5 +1,6 @@
 import { cormorant, cormorantLightItalic, manrope } from './fonts'
 import './globals.css'
+import { LanguageProvider } from '@/context/LanguageContext'
 
 export const metadata = {
 	title: 'Create Next App',
@@ -12,7 +13,9 @@ export default function RootLayout({ children }) {
 			lang='en'
 			className={`${manrope.variable} ${cormorant.variable} ${cormorantLightItalic.variable}`}
 		>
-			<body>{children}</body>
+			<body>
+				<LanguageProvider>{children}</LanguageProvider>
+			</body>
 		</html>
 	)
 }

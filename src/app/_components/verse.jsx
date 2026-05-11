@@ -48,7 +48,7 @@ function Verse({
 			if (split) split.revert()
 			ctx.revert()
 		}
-	}, [])
+	}, [text])
 
 	return (
 		<section
