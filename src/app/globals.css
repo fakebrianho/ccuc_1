@@ -28,7 +28,15 @@ body {
 	display: flex;
 	flex-direction: column;
 	color: var(--foreground);
-	background: var(--background);
+	background: linear-gradient(
+		180deg,
+		rgba(30, 30, 39, 1) 0%,
+		rgba(17, 17, 24, 0.8) 33%,
+		rgba(17, 17, 24, 0.9) 50%,
+		rgba(17, 17, 24, 0.8) 66%,
+		rgba(30, 30, 39, 1) 100%
+	);
+	background-attachment: fixed;
 	font-family: var(--font-manrope), Arial, Helvetica, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
